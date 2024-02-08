@@ -5,7 +5,8 @@
         "Web",
         "Blazor",
         "MVC",
-        "WebApi"
+        "WebApi",
+        "Clean Architecture"
     ],
     "identity": "CleanArch",
     "name": "Clean Architecture Template",
@@ -15,5 +16,55 @@
         "type": "project"
     },
     "sourceName": "CleanArchTemplate",
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "symbols": {
+        "ClientFramework": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "Web API",
+                    "description": "Use ASP.NET Web API"
+                },
+                {
+                    "choice": "MVC",
+                    "description": "Use ASP.NET Core MVC"
+                },
+                {
+                    "choice": "Blazor Web App",
+                    "description": "Use Blazor Web App"
+                },
+                {
+                    "choice": "Blazor Server App",
+                    "description": "Use Blazor Server App"
+                },
+                {
+                    "choice": "Blazor WebAssembly App",
+                    "description": "Use Blazor WebAssembly App"
+                }
+            ],
+            "defaultValue": "Web API",
+            "description": "The client framework to use"
+        },
+        "UseWebApi": {
+            "type": "computed",
+            "value": "(ClientFramework == 'Web API')"
+        },
+        "UseMvc": {
+            "type": "computed",
+            "value": "(ClientFramework == 'MVC')"
+        },
+        "UseBlazorWebApp": {
+            "type": "computed",
+            "value": "(ClientFramework == 'Blazor Web App')"
+        },
+        "UseBlazorServerApp": {
+            "type": "computed",
+            "value": "(ClientFramework == 'Blazor Server App')"
+        },
+        "UseBlazorWebAssemblyApp": {
+            "type": "computed",
+            "value": "(ClientFramework == 'Blazor WebAssembly App')"
+        }
+    }
 }
