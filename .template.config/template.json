@@ -114,8 +114,21 @@
         {
             "source": "./",
             "target": "./",
-            "exclude": ".template.config/**/*",
             "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ],
+                    "include": [
+                        "../Clean Architecture Guides/**/*",
+                        "../Tests/**/*"
+                    ]
+                },
                 {
                     "condition": "(UseWebApi)",
                     "exclude": [
