@@ -23,7 +23,7 @@
             "datatype": "choice",
             "choices": [
                 {
-                    "choice": "Web API",
+                    "choice": "WebAPI",
                     "description": "Use ASP.NET Web API"
                 },
                 {
@@ -31,40 +31,100 @@
                     "description": "Use ASP.NET Core MVC"
                 },
                 {
-                    "choice": "Blazor Web App",
+                    "choice": "BlazorWebApp",
                     "description": "Use Blazor Web App"
                 },
                 {
-                    "choice": "Blazor Server App",
+                    "choice": "BlazorServerApp",
                     "description": "Use Blazor Server App"
                 },
                 {
-                    "choice": "Blazor WebAssembly App",
+                    "choice": "BlazorWebAssemblyApp",
                     "description": "Use Blazor WebAssembly App"
                 }
             ],
-            "defaultValue": "Web API",
+            "defaultValue": "WebAPI",
             "description": "The client framework to use"
         },
         "UseWebApi": {
             "type": "computed",
-            "value": "(ClientFramework == 'Web API')"
+            "value": "(ClientFramework == \"WebAPI\")"
         },
         "UseMvc": {
             "type": "computed",
-            "value": "(ClientFramework == 'MVC')"
+            "value": "(ClientFramework == \"MVC\")"
         },
         "UseBlazorWebApp": {
             "type": "computed",
-            "value": "(ClientFramework == 'Blazor Web App')"
+            "value": "(ClientFramework == \"BlazorWebApp\")"
         },
         "UseBlazorServerApp": {
             "type": "computed",
-            "value": "(ClientFramework == 'Blazor Server App')"
+            "value": "(ClientFramework == \"BlazorServerApp\")"
         },
         "UseBlazorWebAssemblyApp": {
             "type": "computed",
-            "value": "(ClientFramework == 'Blazor WebAssembly App')"
+            "value": "(ClientFramework == \"BlazorWebAssemblyApp\")"
         }
-    }
+    },
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "exclude": ".template.config/**/*",
+            "modifiers": [
+                {
+                    "condition": "(UseWebApi)",
+                    "exclude": [
+                        "src/CleanArchTemplate.BlazorWebApp/**/*",
+                        "src/CleanArchTemplate.BlazorServer/**/*",
+                        "src/CleanArchTemplate.BlazorWASM/**/*",
+                        "src/CleanArchTemplate.MVC/**/*",
+                        "src/CleanArchTemplate.BlazorSSR/**/*"
+                    ]
+                },
+                {
+                    "condition": "(UseMvc)",
+                    "exclude": [
+                        "src/CleanArchTemplate.Api/**/*",
+                        "src/CleanArchTemplate.BlazorWebApp/**/*",
+                        "src/CleanArchTemplate.BlazorServer/**/*",
+                        "src/CleanArchTemplate.BlazorWASM/**/*",
+                        "src/CleanArchTemplate.BlazorSSR/**/*"
+                    ]
+                },
+                {
+                    "condition": "(UseBlazorWebApp)",
+                    "exclude": [
+                        "src/CleanArchTemplate.Api/**/*",
+                        "src/CleanArchTemplate.BlazorServer/**/*",
+                        "src/CleanArchTemplate.BlazorWASM/**/*",
+                        "src/CleanArchTemplate.MVC/**/*",
+                        "src/CleanArchTemplate.BlazorSSR/**/*"
+                    ]
+                },
+                {
+                    "condition": "(UseBlazorServerApp)",
+                    "exclude": [
+                        "src/CleanArchTemplate.Api/**/*",
+                        "src/CleanArchTemplate.BlazorWebApp/**/*",
+                        "src/CleanArchTemplate.BlazorWASM/**/*",
+                        "src/CleanArchTemplate.MVC/**/*",
+                        "src/CleanArchTemplate.BlazorSSR/**/*"
+                    ]
+                },
+                {
+                    "condition": "(UseBlazorWebAssemblyApp)",
+                    "exclude": [
+                        "src/CleanArchTemplate.Api/**/*",
+                        "src/CleanArchTemplate.BlazorWebApp/CleanArchTemplate.BlazorWebApp/**/*",
+                        "src/CleanArchTemplate.BlazorWebApp/CleanArchTemplate.BlazorWebApp.Client/**/*",
+                        "src/CleanArchTemplate.BlazorServer/**/*",
+                        "src/CleanArchTemplate.MVC/**/*",
+                        "src/CleanArchTemplate.BlazorSSR/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
 }
