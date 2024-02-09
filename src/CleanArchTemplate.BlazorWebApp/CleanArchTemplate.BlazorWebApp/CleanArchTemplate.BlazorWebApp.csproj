@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\CleanArchTemplate.Application.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\CleanArchTemplate.Infrastructure.csproj" />
     <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
   </ItemGroup>

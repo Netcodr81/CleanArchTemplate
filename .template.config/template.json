@@ -39,12 +39,55 @@
                     "description": "Use Blazor Server App"
                 },
                 {
+                    "choice": "BlazorSSRApp",
+                    "description": "Use Blazor SSR App"
+                },
+                {
                     "choice": "BlazorWebAssemblyApp",
                     "description": "Use Blazor WebAssembly App"
                 }
             ],
             "defaultValue": "WebAPI",
             "description": "The client framework to use"
+        },
+        "InteractiveAtRoot": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Sets the application to use global interactivity",
+            "defaultValue": "false",
+            "isEnabled": "(ClientFramework == \"BlazorWebApp\")"
+        },
+        "BlazorRenderMode": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "Server",
+                    "description": "Use InteractiveServer Rendering Mode"
+                },
+                {
+                    "choice": "WebAssembly",
+                    "description": "Use InteractiveWebAssembly Rendering Mode"
+                },
+                {
+                    "choice": "Auto",
+                    "description": "Use InteractiveAuto Rendering"
+                }
+            ],
+            "defaultValue": "Auto",
+            "isEnabled": "(ClientFramework == \"BlazorWebApp\")"
+        },
+        "UseServer": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"Server\")"
+        },
+        "UseAuto": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"Auto\")"
+        },
+        "UseWebAssembly": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"WebAssembly\")"
         },
         "UseWebApi": {
             "type": "computed",

@@ -7,12 +7,61 @@
     <base href="/" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="CleanArchTemplate.BlazorWebApp.styles.css" />
-    <HeadOutlet @rendermode="InteractiveAuto" />
+    @*#if (!InteractiveAtRoot)
+    <HeadOutlet />
+    ##elseif (UseAuto)
+    <HeadOutlet @rendermode="@InteractiveAuto" />
+    ##elseif (UseServer)
+    <HeadOutlet @rendermode="@InteractiveServer" />
+    ##else
+    <HeadOutlet @rendermode="@InteractiveWebAssembly" />
+    ##endif*@
 </head>
 
 <body>
-    <Routes @rendermode="InteractiveAuto" />
+    @*#if (!InteractiveAtRoot)
+    <Routes />
+    ##elseif (UseAuto)
+    <Routes @rendermode="@InteractiveAuto" />
+    ##elseif (UseServer)
+    <Routes @rendermode="@InteractiveServer" />
+    ##else
+    <Routes @rendermode="@InteractiveWebAssembly" />
+    ##endif*@
     <script src="_framework/blazor.web.js"></script>
 </body>
 
 </html>
+
+@*#if (!InteractiveAtRoot)
+#elseif (UseAuto)
+
+@code {
+[CascadingParameter]
+private HttpContext HttpContext { get; set; } = default!;
+
+private IComponentRenderMode? RenderModeForPage => HttpContext.Request.Path.StartsWithSegments("/Account")
+? null
+: InteractiveAuto;
+}
+#elseif (UseServer)
+
+@code {
+[CascadingParameter]
+private HttpContext HttpContext { get; set; } = default!;
+
+private IComponentRenderMode? RenderModeForPage => HttpContext.Request.Path.StartsWithSegments("/Account")
+? null
+: InteractiveServer;
+}
+#else
+
+@code {
+[CascadingParameter]
+private HttpContext HttpContext { get; set; } = default!;
+
+private IComponentRenderMode? RenderModeForPage => HttpContext.Request.Path.StartsWithSegments("/Account")
+? null
+: InteractiveWebAssembly;
+}
+#endif*@

@@ -15,17 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.Api", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.MVC", "src\CleanArchTemplate.MVC\CleanArchTemplate.MVC.csproj", "{94B1E6B2-396B-4369-86B1-E0C25F28D89B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.BlazorWebApp", "src\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.csproj", "{331852B9-129B-499A-AB99-B6CA482B88B8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.BlazorWebApp.Client", "src\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj", "{092CBF58-C385-4281-B6C2-80A053547E77}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorServer", "src\CleanArchTemplate.BlazorServer\CleanArchTemplate.BlazorServer.csproj", "{93181D9E-0B50-456E-B1B1-4CB13FBB4972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWASM", "src\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM.csproj", "{16874990-25BB-4183-9DBE-8DDA2AE376CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.BlazorWASM", "src\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM.csproj", "{16874990-25BB-4183-9DBE-8DDA2AE376CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWASM.Client", "src\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM.Client\CleanArchTemplate.BlazorWASM.Client.csproj", "{B32B97D4-55D6-42B2-A7FD-944DF53E45D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTemplate.BlazorWASM.Client", "src\CleanArchTemplate.BlazorWASM\CleanArchTemplate.BlazorWASM.Client\CleanArchTemplate.BlazorWASM.Client.csproj", "{B32B97D4-55D6-42B2-A7FD-944DF53E45D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorSSR", "src\CleanArchTemplate.BlazorSSR\CleanArchTemplate.BlazorSSR.csproj", "{532FF02C-ECE1-4A01-8F36-A43E5B35106F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp", "src\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.csproj", "{12DE066B-2B9D-4BB6-8B08-29615EFF082A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Client", "src\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj", "{2AB722CF-468A-49C0-A05E-2889A1355DE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,14 +51,6 @@ Global
 		{94B1E6B2-396B-4369-86B1-E0C25F28D89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B1E6B2-396B-4369-86B1-E0C25F28D89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B1E6B2-396B-4369-86B1-E0C25F28D89B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{331852B9-129B-499A-AB99-B6CA482B88B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{331852B9-129B-499A-AB99-B6CA482B88B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{331852B9-129B-499A-AB99-B6CA482B88B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{331852B9-129B-499A-AB99-B6CA482B88B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{092CBF58-C385-4281-B6C2-80A053547E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{092CBF58-C385-4281-B6C2-80A053547E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{092CBF58-C385-4281-B6C2-80A053547E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{092CBF58-C385-4281-B6C2-80A053547E77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93181D9E-0B50-456E-B1B1-4CB13FBB4972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93181D9E-0B50-456E-B1B1-4CB13FBB4972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93181D9E-0B50-456E-B1B1-4CB13FBB4972}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,10 +63,14 @@ Global
 		{B32B97D4-55D6-42B2-A7FD-944DF53E45D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32B97D4-55D6-42B2-A7FD-944DF53E45D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B32B97D4-55D6-42B2-A7FD-944DF53E45D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{532FF02C-ECE1-4A01-8F36-A43E5B35106F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{532FF02C-ECE1-4A01-8F36-A43E5B35106F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{532FF02C-ECE1-4A01-8F36-A43E5B35106F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{532FF02C-ECE1-4A01-8F36-A43E5B35106F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DE066B-2B9D-4BB6-8B08-29615EFF082A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DE066B-2B9D-4BB6-8B08-29615EFF082A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DE066B-2B9D-4BB6-8B08-29615EFF082A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DE066B-2B9D-4BB6-8B08-29615EFF082A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB722CF-468A-49C0-A05E-2889A1355DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB722CF-468A-49C0-A05E-2889A1355DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB722CF-468A-49C0-A05E-2889A1355DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB722CF-468A-49C0-A05E-2889A1355DE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,11 +81,13 @@ Global
 		{ED6F67A7-20AE-4D5B-8026-68A30DA6DFCD} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
 		{06B09BFF-5A35-4D5B-81E7-5A219E4B6EE1} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
 		{94B1E6B2-396B-4369-86B1-E0C25F28D89B} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
-		{331852B9-129B-499A-AB99-B6CA482B88B8} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
-		{092CBF58-C385-4281-B6C2-80A053547E77} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
 		{93181D9E-0B50-456E-B1B1-4CB13FBB4972} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
 		{16874990-25BB-4183-9DBE-8DDA2AE376CB} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
 		{B32B97D4-55D6-42B2-A7FD-944DF53E45D7} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
-		{532FF02C-ECE1-4A01-8F36-A43E5B35106F} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
+		{12DE066B-2B9D-4BB6-8B08-29615EFF082A} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
+		{2AB722CF-468A-49C0-A05E-2889A1355DE7} = {0BBFE102-8306-4A26-8213-B6AB9EFA8701}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A738645F-B28C-4175-91BD-1DE734E4D634}
 	EndGlobalSection
 EndGlobal
