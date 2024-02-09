@@ -11,6 +11,8 @@
     "identity": "CleanArch",
     "name": "Clean Architecture Template",
     "shortName": "cleanarch",
+    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
+    "defaultName": "CleanArchTemplate",
     "tags": {
         "language": "C#",
         "type": "project"
