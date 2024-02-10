@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Mike Eckel",
+    "classifications": [
+        "Web",
+        "WebApi",
+        "Clean Architecture"
+    ],
+    "identity": "CleanArchTemplate.WebApi",
+    "groupIdentity": "CleanArchTemplate.WebApi",
+    "name": "Clean Architecture Template - Web API",
+    "shortName": "cleanarch-webapi",
+    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
+    "defaultName": "CleanArchTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "CleanArchTemplate",
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ],
+                    "include": [
+                        "../Clean Architecture Guides/**/*",
+                        "../Tests/**/*"
+                    ]
+                },
+                {
+                    "include": [
+                        "../../../src/CleanArchTemplate.Api/**/*",
+                        "../../../src/Application/**/*",
+                        "../../../src/Domain/**/*",
+                        "../../../src/Infrastructure/**/*",
+                        "../../../Clean Architecture Guides/**/*",
+                        "../../../Tests/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
+}

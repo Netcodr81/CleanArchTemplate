@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Mike Eckel",
+    "classifications": [
+        "Web",
+        "Blazor",
+        "Clean Architecture"
+    ],
+    "identity": "CleanArchTemplate.BlazorWASM",
+    "groupIdentity": "CleanArchTemplate.BlazorWASM",
+    "name": "Clean Architecture Template - Blazor WASM",
+    "shortName": "cleanarch-blazorwasm",
+    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
+    "defaultName": "CleanArchTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "CleanArchTemplate",
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ],
+                    "include": [
+                        "../Clean Architecture Guides/**/*",
+                        "../Tests/**/*"
+                    ]
+                },
+                {
+                    "include": [
+                        "../../../src/CleanArchTemplate.BlazorWASM/**/*",
+                        "../../../src/Application/**/*",
+                        "../../../src/Domain/**/*",
+                        "../../../src/Infrastructure/**/*",
+                        "../../../Clean Architecture Guides/**/*",
+                        "../../../Tests/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
+}

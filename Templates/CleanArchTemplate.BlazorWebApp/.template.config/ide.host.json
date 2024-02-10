@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json.schemastore.org/vs-2017.3.host",
+    "icon": "./icon.png",
+    "symbolInfo": [
+        {
+            "id": "InteractiveAtRoot",
+            "name": {
+                "text": "Global Interactive"
+            },
+            "description": {
+                "text": "This will set the rendering mode at a global level."
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        },
+        {
+            "id": "BlazorRenderMode",
+            "name": {
+                "text": "Blazor Render Mode"
+            },
+            "description": {
+                "text": "Select the type of render mode you want for your application."
+            },
+            "isVisible": true,
+            "defaultValue": "Auto"
+        }
+    ]
+}

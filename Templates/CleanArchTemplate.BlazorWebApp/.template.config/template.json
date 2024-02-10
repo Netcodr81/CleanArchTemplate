@@ -1,0 +1,94 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Mike Eckel",
+    "classifications": [
+        "Web",
+        "Blazor",
+        "Clean Architecture"
+    ],
+    "identity": "CleanArchTemplate.BlazorWebApp",
+    "groupIdentity": "CleanArchTemplate.BlazorWebApp",
+    "name": "Clean Architecture Template",
+    "shortName": "cleanarch-blazorwebapp",
+    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
+    "defaultName": "CleanArchTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "CleanArchTemplate",
+    "preferNameDirectory": true,
+    "symbols": {
+        "InteractiveAtRoot": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Sets the application to use global interactivity",
+            "defaultValue": "false",
+            "isEnabled": "true"
+        },
+        "BlazorRenderMode": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "Server",
+                    "description": "Use InteractiveServer Rendering Mode"
+                },
+                {
+                    "choice": "WebAssembly",
+                    "description": "Use InteractiveWebAssembly Rendering Mode"
+                },
+                {
+                    "choice": "Auto",
+                    "description": "Use InteractiveAuto Rendering"
+                }
+            ],
+            "defaultValue": "Auto",
+            "isEnabled": "true"
+        },
+        "UseServer": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"Server\")"
+        },
+        "UseAuto": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"Auto\")"
+        },
+        "UseWebAssembly": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"WebAssembly\")"
+        }
+    },
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ],
+                    "include": [
+                        "../Clean Architecture Guides/**/*",
+                        "../Tests/**/*"
+                    ]
+                },
+                {
+                    "include": [
+                        "../../../src/CleanArchTemplate.BlazorWebApp/**/*",
+                        "../../../src/Application/**/*",
+                        "../../../src/Domain/**/*",
+                        "../../../src/Infrastructure/**/*",
+                        "../../../Clean Architecture Guides/**/*",
+                        "../../../Tests/**/*"
+                    ]
+                }
+            ]
+        }
+    ]
+}
