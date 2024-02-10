@@ -11,12 +11,19 @@
     "name": "Clean Architecture Template - Blazor SSR",
     "shortName": "cleanarch-blazorssr",
     "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
-    "defaultName": "CleanArchTemplate",
+    "defaultName": "CleanArchTemplate.BlazorSSR",
     "tags": {
         "language": "C#",
         "type": "project"
     },
-    "sourceName": "CleanArchTemplate",
+    "guids":[
+        "81C13D18-61E8-467B-A3D8-7974228168A8",
+        "881655E5-4F6E-482C-9F85-D2B9BB0EF995",
+        "1191901D-6179-4FC7-BB76-7DBC7DA928E8",
+        "419C7FC1-BF18-442D-A17D-8B1A6AE351BD",
+        "A6CE79E9-AADE-484F-BC42-D76A6B08C4A0"    
+    ],
+    "sourceName": "CleanArchTemplate.BlazorSSR",
     "preferNameDirectory": true,
     "sources": [
         {
@@ -33,20 +40,15 @@
                         ".git/**"
                     ],
                     "include": [
+                        "../src/CleanArchTemplate.BlazorSSR/**/*",
+                        "../src/Application/**/*",
+                        "../src/Domain/**/*",
+                        "../src/Infrastructure/**/*",
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
-                },
-                {
-                    "include": [
-                        "../../../src/CleanArchTemplate.BlazorSSR/**/*",
-                        "../../../src/Application/**/*",
-                        "../../../src/Domain/**/*",
-                        "../../../src/Infrastructure/**/*",
-                        "../../../Clean Architecture Guides/**/*",
-                        "../../../Tests/**/*"
-                    ]
                 }
+               
             ]
         }
     ]

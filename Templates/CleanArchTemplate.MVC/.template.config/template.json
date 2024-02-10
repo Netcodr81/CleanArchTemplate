@@ -10,14 +10,21 @@
     "groupIdentity": "CleanArchTemplate.MVC",
     "name": "Clean Architecture Template - MVC",
     "shortName": "cleanarch-mvc",
-    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
-    "defaultName": "CleanArchTemplate",
+    "description": "A template for creating a Clean Architecture solution with a ASP.NET Core MVC app.",
+    "defaultName": "CleanArchTemplate.MVC",
     "tags": {
         "language": "C#",
-        "type": "project"
+        "type": "solution"
     },
-    "sourceName": "CleanArchTemplate",
+    "sourceName": "CleanArchTemplate.MVC",
     "preferNameDirectory": true,
+    "guids":[
+        "3E4F7947-7E0B-44CB-BDA6-9CB2B49A5E1F",
+        "87DD086-206C-452C-AD4F-B81021DE47AC",
+        "D18CA840-602D-4C7A-8B45-83536BBB0675",
+        "079CEEFA-5B10-454A-B0A5-A84BF6CB573D",
+        "8363C936-E4A5-4001-B8B6-F64B437C630A"
+    ],
     "sources": [
         {
             "source": "./",
@@ -33,20 +40,14 @@
                         ".git/**"
                     ],
                     "include": [
+                        "../src/CleanArchTemplate.MVC/**/*",
+                        "../src/Application/**/*",
+                        "../src/Domain/**/*",
+                        "../src/Infrastructure/**/*",
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
-                },
-                {
-                    "include": [
-                        "../../../src/CleanArchTemplate.MVC/**/*",
-                        "../../../src/Application/**/*",
-                        "../../../src/Domain/**/*",
-                        "../../../src/Infrastructure/**/*",
-                        "../../../Clean Architecture Guides/**/*",
-                        "../../../Tests/**/*"
-                    ]
-                }
+                }                
             ]
         }
     ]

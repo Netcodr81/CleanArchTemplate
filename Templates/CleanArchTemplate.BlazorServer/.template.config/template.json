@@ -10,14 +10,22 @@
     "groupIdentity": "CleanArchTemplate.BlazorServer",
     "name": "Clean Architecture Template - Blazor Server",
     "shortName": "cleanarch-blazorserver",
-    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API, MVC, or Blazor Web App.",
-    "defaultName": "CleanArchTemplate",
+    "description": "A template for creating a Clean Architecture solution with a Blazor Server application.",
+    "defaultName": "CleanArchTemplate.BlazorServer",
     "tags": {
         "language": "C#",
-        "type": "project"
+        "type": "solution"
     },
-    "sourceName": "CleanArchTemplate",
+    "sourceName": "CleanArchTemplate.BlazorServer",
     "preferNameDirectory": true,
+    "guids":[
+        "FB2E1FF5-787C-456E-A8E8-82D46BCEE7FF",
+        "5260D135-3AA1-4075-919D-1C97084744D5",
+        "14EF1C03-2FAE-465B-899E-A5FA1F5F6F6C",
+        "7350CE06-A187-4953-A99E-B4185E7564BF",
+        "3D1A248-FE76-4558-A17F-67CC1FADED95"
+    
+    ],
     "sources": [
         {
             "source": "./",
@@ -33,20 +41,14 @@
                         ".git/**"
                     ],
                     "include": [
+                         "../src/CleanArchTemplate.BlazorServer/**/*",
+                        "../src/Application/**/*",
+                        "../src/Domain/**/*",
+                        "../src/Infrastructure/**/*",
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
-                },
-                {
-                    "include": [
-                        "../../../src/CleanArchTemplate.BlazorServer/**/*",
-                        "../../../src/Application/**/*",
-                        "../../../src/Domain/**/*",
-                        "../../../src/Infrastructure/**/*",
-                        "../../../Clean Architecture Guides/**/*",
-                        "../../../Tests/**/*"
-                    ]
-                }
+                }               
             ]
         }
     ]
