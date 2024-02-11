@@ -11,7 +11,7 @@
     "name": "Clean Architecture Template - Web API",
     "shortName": "cleanarch-webapi",
     "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API.",
-    "defaultName": "CleanArchTemplate.WebApi",
+    "defaultName": "CleanArchTemplateWebApi",
     "tags": {
         "language": "C#",
         "type": "solution"

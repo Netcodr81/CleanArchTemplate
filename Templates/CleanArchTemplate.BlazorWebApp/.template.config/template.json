@@ -89,6 +89,12 @@
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
+                },
+                {
+                    "condition": "UseServer",
+                    "exclude": [
+                        "../src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*"
+                    ]
                 }                
             ]
         }

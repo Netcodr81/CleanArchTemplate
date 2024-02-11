@@ -1,5 +1,4 @@
-#if (!UseServer && !UseWebAssembly)
-#endif
+using CleanArchTemplate.BlazorWebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +39,7 @@ app.UseAntiforgery();
 #if (UseAuto)
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode()
+    .AddInteractiveWebAssemblyRenderMode();
 #elif (UseServer)
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
