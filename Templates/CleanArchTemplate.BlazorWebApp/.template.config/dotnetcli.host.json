@@ -4,9 +4,13 @@
         "Framework": {
             "longName": "framework"
         },
-        "BlazorRenderMode"{
+        "BlazorRenderMode": {
             "longName": "render-mode",
             "shortName": "r"
+        },
+        "Authentication": {
+            "longName": "auth",
+            "shortName": "a"
         }
     }
 }

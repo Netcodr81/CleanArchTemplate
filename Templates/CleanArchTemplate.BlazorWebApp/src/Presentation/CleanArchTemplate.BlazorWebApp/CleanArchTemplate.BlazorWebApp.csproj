@@ -10,7 +10,15 @@
 <!--#if (UseWebAssembly || UseAuto)-->
     <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj" />
 <!--#endif-->
+<!--#if (!UseNone)-->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
+<!--#endif-->    
+<!-- #if (UseAuthorization)-->
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1" />
+<!--#endif-->
   </ItemGroup>
 
 </Project>
