@@ -37,7 +37,13 @@
                 }
             ],
             "defaultValue": "net8.0",
-            "replaces": "net8.0"
+            "replaces": "{{dotnetFrameworkVersion}}"
+        },
+         "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
         }
     },
     "sources": [

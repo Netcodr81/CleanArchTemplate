@@ -14,10 +14,9 @@
     "defaultName": "CleanArchTemplate.BlazorWASM",
     "tags": {
         "language": "C#",
-        "type": "project"
+        "type": "solution"
     },
     "guids": [
-        "2FB01982-6E88-42D1-AB94-3F4DE33BC49D",
         "42891077-14D6-421A-9456-2D26B66988A3",
         "E525AFE9-4D8B-4D90-8A00-51165DE08B7B",
         "DABFAB1A-607B-42F5-9289-75D5C14A6A35",
@@ -25,6 +24,27 @@
         "68498C58-7FF4-4457-AA08-C11C1911394F",
         "D826FC81-4586-4E62-964B-7144CC1EDF5D"
     ],
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net8.0",
+                    "description": "Target .NET 8"
+                }
+            ],
+            "defaultValue": "net8.0",
+            "replaces": "{{dotnetFrameworkVersion}}"
+        },
+        "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
+        }
+    },
     "sourceName": "CleanArchTemplate.BlazorWASM",
     "preferNameDirectory": true,
     "sources": [
@@ -49,7 +69,7 @@
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
-                }               
+                }
             ]
         }
     ]

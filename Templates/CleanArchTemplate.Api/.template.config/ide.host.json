@@ -7,17 +7,7 @@
       "name": {
         "text": "Framework",
         "defaultValue": "net8.0"
-      },
-      "description": {
-        "text": "Enables OpenAPI (Swagger) support",
-        "overrideDefaultText": true
-      },
-      "invertBoolean": true,
-      "isVisible": true,
-      "defaultValue": "true",
-      "persistenceScope": "templateGroup"
-    },
-    
-    
-  ],
+      }   
+    }
+  ]
 }

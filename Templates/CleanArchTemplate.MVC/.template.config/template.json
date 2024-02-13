@@ -18,13 +18,33 @@
     },
     "sourceName": "CleanArchTemplate.MVC",
     "preferNameDirectory": true,
-    "guids":[
-        "3E4F7947-7E0B-44CB-BDA6-9CB2B49A5E1F",
-        "87DD086-206C-452C-AD4F-B81021DE47AC",
+    "guids": [
+        "A87DD086-206C-452C-AD4F-B81021DE47AC",
         "D18CA840-602D-4C7A-8B45-83536BBB0675",
         "079CEEFA-5B10-454A-B0A5-A84BF6CB573D",
         "8363C936-E4A5-4001-B8B6-F64B437C630A"
     ],
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net8.0",
+                    "description": "Target .NET 8"
+                }
+            ],
+            "defaultValue": "net8.0",
+            "replaces": "{{dotnetFrameworkVersion}}"
+        },
+        "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
+        }
+    },
     "sources": [
         {
             "source": "./",
@@ -47,7 +67,7 @@
                         "../Clean Architecture Guides/**/*",
                         "../Tests/**/*"
                     ]
-                }                
+                }
             ]
         }
     ]
