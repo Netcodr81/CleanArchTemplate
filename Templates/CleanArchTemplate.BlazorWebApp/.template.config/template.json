@@ -16,23 +16,51 @@
         "language": "C#",
         "type": "solution"
     },
-    "guids":[
-        "DCE58608-51FC-4A61-B531-DE45841A0073",
+    "guids": [
         "42B0B029-6904-44DB-99CD-B9D2EE401FDB",
         "21ECA87D-DBFA-4BD2-A0CD-0FD895B78ACF",
         "C5375CBC-56CF-4A8F-9467-3D84D4AFA57A",
         "49501BF0-53B9-4B30-9047-D32D9CFB02CB",
-        "65128C0D-2FC3-4899-A1CA-081F92A1EA4B"       
+        "65128C0D-2FC3-4899-A1CA-081F92A1EA4B"
     ],
     "sourceName": "CleanArchTemplate.BlazorWebApp",
     "preferNameDirectory": true,
     "symbols": {
-        "InteractiveAtRoot": {
+        "InteractivityLocation": {
             "type": "parameter",
-            "datatype": "bool",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "PerPage/Component",
+                    "description": "PerPage/Component"
+                },
+                {
+                    "choice": "Global",
+                    "description": "Global"
+                }
+            ],
             "description": "Sets the application to use global interactivity",
-            "defaultValue": "false",
+            "defaultValue": "PerPage/Component",
             "isEnabled": "true"
+        },
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net8.0",
+                    "description": "Target .NET 8"
+                }
+            ],
+            "defaultValue": "net8.0",
+            "replaces": "{{dotnetFrameworkVersion}}"
+        },
+        "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
         },
         "BlazorRenderMode": {
             "type": "parameter",
@@ -65,6 +93,10 @@
         "UseWebAssembly": {
             "type": "computed",
             "value": "(BlazorRenderMode == \"WebAssembly\")"
+        },
+        "UseGlobalInteractivity": {
+            "type": "computed",
+            "value": "(InteractivityLocation == \"Global\")"
         }
     },
     "sources": [
@@ -82,7 +114,7 @@
                         ".git/**"
                     ],
                     "include": [
-                         "../src/CleanArchTemplate.BlazorWebApp/**/*",
+                        "../src/CleanArchTemplate.BlazorWebApp/**/*",
                         "../src/Application/**/*",
                         "../src/Domain/**/*",
                         "../src/Infrastructure/**/*",
@@ -95,7 +127,7 @@
                     "exclude": [
                         "../src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*"
                     ]
-                }                
+                }
             ]
         }
     ]

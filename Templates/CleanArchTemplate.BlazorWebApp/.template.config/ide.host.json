@@ -3,26 +3,25 @@
     "icon": "./icon.png",
     "symbolInfo": [
         {
-            "id": "InteractiveAtRoot",
+            "id": "Framework",
             "name": {
-                "text": "Global Interactive"
-            },
-            "description": {
-                "text": "This will set the rendering mode at a global level."
-            },
-            "isVisible": true,
-            "defaultValue": "false"
+                "text": "Framework",
+                "defaultValue": "net8.0"
+            }
+        },
+        {
+            "id": "InteractivityLocation",
+            "name": {
+                "text": "Interactivity Location",
+                "defaultValue": "PerPage/Component"
+            }
         },
         {
             "id": "BlazorRenderMode",
             "name": {
-                "text": "Blazor Render Mode"
-            },
-            "description": {
-                "text": "Select the type of render mode you want for your application."
-            },
-            "isVisible": true,
-            "defaultValue": "Auto"
+                "text": "Render Mode",
+                "defaultValue": "Auto"
+            }
         }
     ]
 }
