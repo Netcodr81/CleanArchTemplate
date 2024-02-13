@@ -7,7 +7,7 @@
     <base href="/" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="CleanArchTemplate.BlazorWebApp.styles.css" />
-    @*#if (!UseGlobalInteractivity)
+    @*#if (!UseGlobalInteractivity || UseNone)
     <HeadOutlet />
     ##elseif (UseAuto)
     <HeadOutlet @rendermode="@InteractiveAuto" />
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    @*#if (!UseGlobalInteractivity)
+    @*#if (!UseGlobalInteractivity || UseNone)
     <Routes />
     ##elseif (UseAuto)
     <Routes @rendermode="@InteractiveAuto" />

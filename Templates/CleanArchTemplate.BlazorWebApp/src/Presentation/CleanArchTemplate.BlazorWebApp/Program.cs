@@ -3,14 +3,19 @@ using CleanArchTemplate.BlazorWebApp.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
+
 #if (UseAuto)
+builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 #elif (UseServer)
+builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 #elif (UseWebAssembly)
+builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+#elif (UseNone)
+    builder.Services.AddRazorComponents();
 #endif
 
 var app = builder.Build();
@@ -46,6 +51,8 @@ app.MapRazorComponents<App>()
 #elif (UseWebAssembly)
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
+#elif (UseNone)
+app.MapRazorComponents<App>();
 #endif
 #if (UseWebAssembly)
   .AddAdditionalAssemblies(typeof(CleanArchTemplate.BlazorWebApp.Client._Imports).Assembly);

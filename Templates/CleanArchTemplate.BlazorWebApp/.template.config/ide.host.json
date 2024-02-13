@@ -20,7 +20,7 @@
             "id": "BlazorRenderMode",
             "name": {
                 "text": "Render Mode",
-                "defaultValue": "Auto"
+                "defaultValue": "None"
             }
         }
     ]

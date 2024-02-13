@@ -3,6 +3,10 @@
     "symbolInfo": {
         "Framework": {
             "longName": "framework"
+        },
+        "BlazorRenderMode"{
+            "longName": "render-mode",
+            "shortName": "r"
         }
     }
 }

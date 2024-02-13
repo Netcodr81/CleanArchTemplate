@@ -77,6 +77,10 @@
                 {
                     "choice": "Auto",
                     "description": "Use InteractiveAuto Rendering"
+                },
+                {
+                    "choice": "None",
+                    "description": "None"
                 }
             ],
             "defaultValue": "Auto",
@@ -93,6 +97,10 @@
         "UseWebAssembly": {
             "type": "computed",
             "value": "(BlazorRenderMode == \"WebAssembly\")"
+        },
+        "UseNone": {
+            "type": "computed",
+            "value": "(BlazorRenderMode == \"None\")"
         },
         "UseGlobalInteractivity": {
             "type": "computed",
