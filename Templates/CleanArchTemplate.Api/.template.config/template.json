@@ -6,12 +6,11 @@
         "WebApi",
         "Clean Architecture"
     ],
-    "identity": "CleanArchTemplate.WebApi",
-    "groupIdentity": "CleanArchTemplate.WebApi",
+    "identity": "CleanArchTemplate.WebApi.CSharp",
     "name": "Clean Architecture Template - Web API",
     "shortName": "cleanarch-webapi",
     "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API.",
-    "defaultName": "CleanArchTemplateWebApi",
+    "defaultName": "CleanArchTemplate.WebApi",
     "tags": {
         "language": "C#",
         "type": "solution"
@@ -19,10 +18,10 @@
     "guids": [
         "8433666F-DBC9-4E2D-8329-7884AFB2FF3B",
         "FB999E1F-F6B5-45B5-A991-0AAD804C0AC2",
-        "DE0398A8-6254-47A8-8E38-C4803A391E3C",
+        "CC33BF68-D706-403B-A02D-18B4E79F4A40",
         "99DC90FA-0822-4FDF-9A73-A485CFCED01F"
     ],
-    "sourceName": "CleanArchTemplate.WebApi",
+    "sourceName": "CleanArchTemplate.Api",
     "preferNameDirectory": true,
     "symbols": {
         "Framework": {
@@ -36,13 +35,39 @@
                 }
             ],
             "defaultValue": "net8.0",
-            "replaces": "{{dotnetFrameworkVersion}}"
+            "replaces": "{{dotnetFrameworkVersion}}",
+            "isEnabled": true
+        },
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
         },
         "CreateSolutionDirectory": {
             "type": "parameter",
             "description": "Create a directory for the solution.",
             "datatype": "bool",
             "defaultValue": "true"
+        },
+        "UsingControllers": {
+            "type": "computed",
+            "value": "(ApiType == \"Controller\")"
+        },
+        "ApiType": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "Controller",
+                    "description": "Controller Based Api"
+                },
+                {
+                    "choice": "Minimal",
+                    "description": "Minimal Api"
+                }
+            ],
+            "description": "Sets the type of API to Create",
+            "defaultValue": "ControllerApi",
+            "isEnabled": "true"
         }
     },
     "sources": [
@@ -58,14 +83,13 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
-                    ],
-                    "include": [
-                        "../src/CleanArchTemplate.Api/**/*",
-                        "../src/Application/**/*",
-                        "../src/Domain/**/*",
-                        "../src/Infrastructure/**/*",
-                        "../Clean Architecture Guides/**/*",
-                        "../Tests/**/*"
+                    ]
+                },
+                {
+                    "condition": "!UsingControllers",
+                    "exclude": [
+                        "src/Presentation/Controllers/**/*",
+                        "src/Presentation/WeatherForecast.cs"
                     ]
                 }
             ]
