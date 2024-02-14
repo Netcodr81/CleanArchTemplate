@@ -6,8 +6,7 @@
         "Blazor",
         "Clean Architecture"
     ],
-    "identity": "CleanArchTemplate.BlazorWASM",
-    "groupIdentity": "CleanArchTemplate.BlazorWASM",
+    "identity": "CleanArchTemplate.BlazorWASM.CSharp",
     "name": "Clean Architecture Template - Blazor WASM",
     "shortName": "cleanarch-blazorwasm",
     "description": "A template for creating a Clean Architecture solution with a Blazor WASM app.",
@@ -60,14 +59,6 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
-                    ],
-                    "include": [
-                        "../src/CleanArchTemplate.BlazorWASM/**/*",
-                        "../src/Application/**/*",
-                        "../src/Domain/**/*",
-                        "../src/Infrastructure/**/*",
-                        "../Clean Architecture Guides/**/*",
-                        "../Tests/**/*"
                     ]
                 }
             ]

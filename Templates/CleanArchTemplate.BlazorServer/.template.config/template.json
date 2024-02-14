@@ -6,8 +6,7 @@
         "Blazor",
         "Clean Architecture"
     ],
-    "identity": "CleanArchTemplate.BlazorServer",
-    "groupIdentity": "CleanArchTemplate.BlazorServer",
+    "identity": "CleanArchTemplate.BlazorServer.CSharp", 
     "name": "Clean Architecture Template - Blazor Server",
     "shortName": "cleanarch-blazorserver",
     "description": "A template for creating a Clean Architecture solution with a Blazor Server application.",
@@ -59,15 +58,7 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
-                    ],
-                    "include": [
-                         "../src/CleanArchTemplate.BlazorServer/**/*",
-                        "../src/Application/**/*",
-                        "../src/Domain/**/*",
-                        "../src/Infrastructure/**/*",
-                        "../Clean Architecture Guides/**/*",
-                        "../Tests/**/*"
-                    ]
+                    ]                    
                 }               
             ]
         }

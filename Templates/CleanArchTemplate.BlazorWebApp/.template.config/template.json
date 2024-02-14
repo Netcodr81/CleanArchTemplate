@@ -6,8 +6,7 @@
         "Blazor",
         "Clean Architecture"
     ],
-    "identity": "CleanArchTemplate.BlazorWebApp",
-    "groupIdentity": "CleanArchTemplate.BlazorWebApp",
+    "identity": "CleanArchTemplate.BlazorWebApp.CSharp",
     "name": "Clean Architecture Template - Blazor Web App",
     "shortName": "cleanarch-blazorwebapp",
     "description": "A template for creating a Clean Architecture solution for a Blazor Web App.",
@@ -140,46 +139,38 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
-                    ],
-                    "include": [
-                        "../src/CleanArchTemplate.BlazorWebApp/**/*",
-                        "../src/Application/**/*",
-                        "../src/Domain/**/*",
-                        "../src/Infrastructure/**/*",
-                        "../Clean Architecture Guides/**/*",
-                        "../Tests/**/*"
                     ]
                 },
                 {
                     "condition": "UseServer",
                     "exclude": [
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*"
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*"
                     ]
                 },
                 {
                     "condition": "!UseAuthorization",
                     "exclude": [
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp/Data/**/*",
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp/Components/Account/**/*"
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp/Data/**/*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp/Components/Account/**/*"
                     ]
                 },
                 {
                     "condition": "UseNone",
                     "exclude": [
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*",
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp/**/*"
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Client/**/*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp/**/*"
                     ]
-                },               
+                },
                 {
                     "condition": "UseGlobalInteractivity",
                     "exclude": [
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp.Client/Shared/PerPage/**/*"
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Client/Shared/PerPage/**/*"
                     ]
                 },
                 {
                     "condition": "UseNone",
                     "exclude": [
-                        "../src/Presentation/CleanArchTemplate.BlazorWebApp/Components/Account/PersistingRevalidatingAuthenticationStateProvider.cs"
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp/Components/Account/PersistingRevalidatingAuthenticationStateProvider.cs"
                     ]
                 }
             ]
