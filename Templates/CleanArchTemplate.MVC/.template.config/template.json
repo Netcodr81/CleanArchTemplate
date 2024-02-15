@@ -3,26 +3,26 @@
     "author": "Mike Eckel",
     "classifications": [
         "Web",
-        "Blazor",
+        "MVC",
         "Clean Architecture"
     ],
     "identity": "CleanArchTemplate.MVC.CSharp",
     "name": "Clean Architecture Template - MVC",
     "shortName": "cleanarch-mvc",
     "description": "A template for creating a Clean Architecture solution with a ASP.NET Core MVC app.",
-    "defaultName": "CleanArchTemplateMVCWeb",
+    "defaultName": "CleanArchTemplate.MVCWeb",
     "tags": {
         "language": "C#",
         "type": "solution"
     },
-    "sourceName": "CleanArchTemplate.MVC",
-    "preferNameDirectory": true,
     "guids": [
         "A87DD086-206C-452C-AD4F-B81021DE47AC",
         "D18CA840-602D-4C7A-8B45-83536BBB0675",
         "079CEEFA-5B10-454A-B0A5-A84BF6CB573D",
         "8363C936-E4A5-4001-B8B6-F64B437C630A"
     ],
+    "sourceName": "CleanArchTemplate.MVC",
+    "preferNameDirectory": true,
     "symbols": {
         "Framework": {
             "type": "parameter",
@@ -37,11 +37,48 @@
             "defaultValue": "net8.0",
             "replaces": "{{dotnetFrameworkVersion}}"
         },
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
+        },
         "CreateSolutionDirectory": {
             "type": "parameter",
             "description": "Create a directory for the solution.",
             "datatype": "bool",
             "defaultValue": "true"
+        },
+        "AuthenticationType": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "None",
+                    "description": "No authorization"
+                },
+                {
+                    "choice": "Windows",
+                    "description": "Windows Authentication"
+                },
+                {
+                    "choice": "Individual Accounts",
+                    "description": "Individual User Accounts"
+                }
+            ],
+            "description": "Sets the type of API to Create",
+            "defaultValue": "None",
+            "isEnabled": "true"
+        },
+        "UseIndividualAccounts": {
+            "type": "computed",
+            "value": "(AuthenticationType == \"Individual Accounts\")"
+        },
+        "UseWindowsAuthentication": {
+            "type": "computed",
+            "value": "(AuthenticationType == \"Windows\")"
+        },
+        "UseNone": {
+            "type": "computed",
+            "value": "(AuthenticationType == \"None\")"
         }
     },
     "sources": [
@@ -57,6 +94,13 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
+                    ]
+                },
+                {
+                    "condition": "(UseNone || UseWindowsAuthentication)",
+                    "exclude": [
+                        "src/Presentation/Data/**/*",
+                        "src/Presentation/Areas/**/*"
                     ]
                 }
             ]

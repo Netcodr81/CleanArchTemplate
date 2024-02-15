@@ -1,12 +1,19 @@
 {
-    "$schema": "http://json.schemastore.org/vs-2017.3.host",    
+    "$schema": "http://json.schemastore.org/vs-2017.3.host",
     "icon": "./icon.png",
     "symbolInfo": [
         {
             "id": "Framework",
             "name": {
                 "text": "Framework",
-                "defaultValue":"net8.0"
+                "defaultValue": "net8.0"
+            }
+        },
+        {
+            "id": "AuthenticationType",
+            "name": {
+                "text": "Authentication Type",
+                "defaultValue": "None"
             }
         }
     ]
