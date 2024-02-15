@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.MVC.Appli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.MVC.Infrastructure", "src\Infrastructure\CleanArchTemplate.MVC.Infrastructure.csproj", "{079CEEFA-5B10-454A-B0A5-A84BF6CB573D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.MVC", "src\Presentation\CleanArchTemplate.MVC.csproj", "{8363C936-E4A5-4001-B8B6-F64B437C630A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.MVC.Web", "src\Presentation\CleanArchTemplate.MVC.Web.csproj", "{8363C936-E4A5-4001-B8B6-F64B437C630A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

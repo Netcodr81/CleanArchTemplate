@@ -6,12 +6,11 @@
         "Blazor",
         "Clean Architecture"
     ],
-    "identity": "CleanArchTemplate.MVC",
-    "groupIdentity": "CleanArchTemplate.MVC",
+    "identity": "CleanArchTemplate.MVC.CSharp",
     "name": "Clean Architecture Template - MVC",
     "shortName": "cleanarch-mvc",
     "description": "A template for creating a Clean Architecture solution with a ASP.NET Core MVC app.",
-    "defaultName": "CleanArchTemplate.MVC",
+    "defaultName": "CleanArchTemplateMVCWeb",
     "tags": {
         "language": "C#",
         "type": "solution"
@@ -58,14 +57,6 @@
                         ".github/**",
                         ".gitignore",
                         ".git/**"
-                    ],
-                    "include": [
-                        "../src/CleanArchTemplate.MVC/**/*",
-                        "../src/Application/**/*",
-                        "../src/Domain/**/*",
-                        "../src/Infrastructure/**/*",
-                        "../Clean Architecture Guides/**/*",
-                        "../Tests/**/*"
                     ]
                 }
             ]

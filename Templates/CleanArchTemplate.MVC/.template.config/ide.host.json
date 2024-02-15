@@ -5,7 +5,8 @@
         {
             "id": "Framework",
             "name": {
-                "text": "Framework"
+                "text": "Framework",
+                "defaultValue":"net8.0"
             }
         }
     ]
