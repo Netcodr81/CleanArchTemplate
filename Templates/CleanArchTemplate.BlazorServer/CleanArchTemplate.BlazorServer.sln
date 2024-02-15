@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorServer.Domain", "src\Domain\CleanArchTemplate.BlazorServer.Domain.csproj", "{7350CE06-A187-4953-A99E-B4185E7564BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorServer", "src\Presentation\CleanArchTemplate.BlazorServer.csproj", "{03D1A248-FE76-4558-A17F-67CC1FADED95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorServer.Web", "src\Presentation\CleanArchTemplate.BlazorServer.Web.csproj", "{03D1A248-FE76-4558-A17F-67CC1FADED95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

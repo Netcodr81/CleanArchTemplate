@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Application\CleanArchTemplate.BlazorWebApp.Application.csproj" />
 <!--#if (UseWebAssembly || UseAuto)-->
-    <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj" />
+    <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Web.Client.csproj" />
 <!--#endif-->
 <!--#if (!UseNone)-->
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />

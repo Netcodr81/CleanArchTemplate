@@ -11,12 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Infrastructure", "src\Infrastructure\CleanArchTemplate.BlazorWebApp.Infrastructure.csproj", "{C5375CBC-56CF-4A8F-9467-3D84D4AFA57A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{7318CD0C-BA63-4A99-85D6-14D76A607624}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp", "src\Presentation\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.csproj", "{49501BF0-53B9-4B30-9047-D32D9CFB02CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web", "src\Presentation\CleanArchTemplate.BlazorWebApp\CleanArchTemplate.BlazorWebApp.Web.csproj", "{49501BF0-53B9-4B30-9047-D32D9CFB02CB}"
 EndProject
 #if(UseWebAssembly || UseAuto)
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Client", "src\Presentation\CleanArchTemplate.BlazorWebApp.Client\CleanArchTemplate.BlazorWebApp.Client.csproj", "{65128C0D-2FC3-4899-A1CA-081F92A1EA4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web.Client", "src\Presentation\CleanArchTemplate.BlazorWebApp.Web.Client\CleanArchTemplate.BlazorWebApp.Client.csproj", "{65128C0D-2FC3-4899-A1CA-081F92A1EA4B}"
 #endif
 EndProject
 Global
@@ -55,10 +53,9 @@ Global
 		{42B0B029-6904-44DB-99CD-B9D2EE401FDB} = {DCE58608-51FC-4A61-B531-DE45841A0073}
 		{21ECA87D-DBFA-4BD2-A0CD-0FD895B78ACF} = {DCE58608-51FC-4A61-B531-DE45841A0073}
 		{C5375CBC-56CF-4A8F-9467-3D84D4AFA57A} = {DCE58608-51FC-4A61-B531-DE45841A0073}
-		{7318CD0C-BA63-4A99-85D6-14D76A607624} = {DCE58608-51FC-4A61-B531-DE45841A0073}
-		{49501BF0-53B9-4B30-9047-D32D9CFB02CB} = {7318CD0C-BA63-4A99-85D6-14D76A607624}
+		{49501BF0-53B9-4B30-9047-D32D9CFB02CB} = {DCE58608-51FC-4A61-B531-DE45841A0073}
 		#if(UseWebAssembly || UseAuto)
-		{65128C0D-2FC3-4899-A1CA-081F92A1EA4B} = {7318CD0C-BA63-4A99-85D6-14D76A607624}
+		{65128C0D-2FC3-4899-A1CA-081F92A1EA4B} = {DCE58608-51FC-4A61-B531-DE45841A0073}
 		#endif
 	EndGlobalSection
 EndGlobal
