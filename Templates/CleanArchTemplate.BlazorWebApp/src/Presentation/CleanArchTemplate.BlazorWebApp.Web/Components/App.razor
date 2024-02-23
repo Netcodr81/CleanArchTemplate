@@ -1,40 +1,49 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
+    @*#if (SampleContent)
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    ##endif*@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="CleanArchTemplate.BlazorWebApp.Web.styles.css" />
-    @*#if (!UseGlobalInteractivity || UseNone)
+    @*#if (SampleContent)
+    <link rel="icon" type="image/png" href="favicon.png" />
+    ##endif*@
+    @*#if (!InteractiveAtRoot)
     <HeadOutlet />
-    ##elseif (UseAuto)
+    ##elseif (IndividualLocalAuth)
+    <HeadOutlet @rendermode="@RenderModeForPage" />
+    ##elseif (UseServer && UseWebAssembly)
     <HeadOutlet @rendermode="@InteractiveAuto" />
     ##elseif (UseServer)
     <HeadOutlet @rendermode="@InteractiveServer" />
-    ##else
+    ##elseif (UseWebAssembly)
     <HeadOutlet @rendermode="@InteractiveWebAssembly" />
-    ##endif*@
+    #endif*@
 </head>
 
 <body>
-    @*#if (!UseGlobalInteractivity || UseNone)
+    @*#if (!InteractiveAtRoot)
     <Routes />
-    ##elseif (UseAuto)
+    ##elseif (IndividualLocalAuth)
+    <Routes @rendermode="@RenderModeForPage" />
+    ##elseif (InterActiveAtRoot && UseAuto)
     <Routes @rendermode="@InteractiveAuto" />
     ##elseif (UseServer)
     <Routes @rendermode="@InteractiveServer" />
     ##else
     <Routes @rendermode="@InteractiveWebAssembly" />
-    ##endif*@
+    #endif*@
     <script src="_framework/blazor.web.js"></script>
 </body>
 
 </html>
-
-@*#if (!UseGlobalInteractivity)
-#elseif (UseAuto)
+@*#if (!InteractiveAtRoot || !IndividualLocalAuth)
+##elseif (UseServer && UseWebAssembly)
 
 @code {
 [CascadingParameter]
@@ -54,7 +63,7 @@ private IComponentRenderMode? RenderModeForPage => HttpContext.Request.Path.Star
 ? null
 : InteractiveServer;
 }
-#else
+##else
 
 @code {
 [CascadingParameter]

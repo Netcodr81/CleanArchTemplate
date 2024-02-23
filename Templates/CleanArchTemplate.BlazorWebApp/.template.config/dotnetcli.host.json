@@ -3,14 +3,6 @@
     "symbolInfo": {
         "Framework": {
             "longName": "framework"
-        },
-        "BlazorRenderMode": {
-            "longName": "render-mode",
-            "shortName": "r"
-        },
-        "Authentication": {
-            "longName": "auth",
-            "shortName": "a"
-        }
+        }       
     }
 }

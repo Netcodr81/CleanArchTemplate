@@ -1,6 +1,8 @@
-﻿@using System.Net.Http
+﻿﻿@using System.Net.Http
 @using System.Net.Http.Json
+@*#if (IndividualLocalAuth)
 @using Microsoft.AspNetCore.Components.Authorization
+##endif*@
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
@@ -8,7 +10,7 @@
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
 @using CleanArchTemplate.BlazorWebApp.Web
-@*#if (UseWebAssembly || UseAuto)
+@*#if (UseWebAssembly) -->
 @using CleanArchTemplate.BlazorWebApp.Web.Client
 ##endif*@
 @using CleanArchTemplate.BlazorWebApp.Web.Components

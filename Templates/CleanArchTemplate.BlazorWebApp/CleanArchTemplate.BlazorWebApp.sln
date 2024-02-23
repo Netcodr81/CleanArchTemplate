@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3AABABC0-152
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web", "src\Presentation\CleanArchTemplate.BlazorWebApp.Web\CleanArchTemplate.BlazorWebApp.Web.csproj", "{81459D3A-7131-4690-AA00-9A2133EC3FC7}"
 EndProject
-#if(UseWebAssembly || UseAuto)
+#if (InteractivityPlatform == "WebAssembly" || UseAuto)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web.Client", "src\Presentation\CleanArchTemplate.BlazorWebApp.Web.Client\CleanArchTemplate.BlazorWebApp.Web.Client.csproj", "{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}"
 EndProject
 #endif
@@ -31,12 +31,12 @@ Global
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		#if(UseWebAssembly || UseAuto)
+	#if (InteractivityPlatform == "WebAssembly" || UseAuto)
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Release|Any CPU.Build.0 = Release|Any CPU
-		#endif
+	#endif
 		{CB38F49B-9A25-4897-BCB6-6AF4E40D4096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB38F49B-9A25-4897-BCB6-6AF4E40D4096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB38F49B-9A25-4897-BCB6-6AF4E40D4096}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,10 +51,10 @@ Global
 		{D24745A0-3161-4B10-B19F-7DBC0B9E5C7C}.Release|Any CPU.Build.0 = Release|Any CPU	
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-	{81459D3A-7131-4690-AA00-9A2133EC3FC7} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
-		#if(UseWebAssembly || UseAuto)
+		{81459D3A-7131-4690-AA00-9A2133EC3FC7} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
+	#if (InteractivityPlatform == "WebAssembly" || UseAuto)
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
-		#endif
+	#endif
 		{CB38F49B-9A25-4897-BCB6-6AF4E40D4096} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
 		{57014501-EC2B-43E6-A685-A24F92E7E9FB} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
 		{D24745A0-3161-4B10-B19F-7DBC0B9E5C7C} = {3AABABC0-1525-4191-B24E-284C1D9C9166}		

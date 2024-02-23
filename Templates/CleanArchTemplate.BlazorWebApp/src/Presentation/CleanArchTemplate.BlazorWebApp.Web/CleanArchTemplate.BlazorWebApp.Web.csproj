@@ -3,22 +3,26 @@
   <PropertyGroup>
     <TargetFramework>{{dotnetFrameworkVersion}}</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>    
+    <ImplicitUsings>enable</ImplicitUsings>       
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Application\CleanArchTemplate.BlazorWebApp.Application.csproj" />
-<!--#if (UseWebAssembly || UseAuto)-->
-    <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Web.Client\CleanArchTemplate.BlazorWebApp.Web.Client.csproj" />
-<!--#endif-->
-<!--#if (!UseNone)-->
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
-<!--#endif-->    
-<!-- #if (UseAuthorization)-->
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1" />
-<!--#endif-->
+  <ItemGroup>    
+     <ProjectReference Include="..\..\Application\CleanArchTemplate.BlazorWebApp.Application.csproj" />
+     <ProjectReference Include="..\..\Infrastructure\CleanArchTemplate.BlazorWebApp.Infrastructure.csproj" />
+    <!--#if (UseWebAssembly || (InteractivityPlatform == "Auto")) -->
+     <ProjectReference Include="..\CleanArchTemplate.BlazorWebApp.Web.Client\CleanArchTemplate.BlazorWebApp.Web.Client.csproj" />
+     <!--#endif-->
   </ItemGroup>
+
+  <!--#if (UseWebAssembly || IndividualLocalAuth) -->
+  <ItemGroup>
+   
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2" />   
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2"  />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2" />
+  </ItemGroup>
+
+  <!--#endif -->
 </Project>

@@ -13,11 +13,11 @@
             "id": "InteractivityLocation",
             "name": {
                 "text": "Interactivity Location",
-                "defaultValue": "PerPage/Component"
+                "defaultValue": "Global"
             }
         },
         {
-            "id": "BlazorRenderMode",
+            "id": "InteractivityPlatform",
             "name": {
                 "text": "Render Mode",
                 "defaultValue": "None"
@@ -28,6 +28,13 @@
             "name": {
                 "text": "Authentication type",
                 "defaultValue": "None"
+            }
+        },
+        {
+            "id": "IncludeSampleContent",
+            "name": {
+                "text": "Include Sample Content",
+                "defaultValue": "true"
             }
         }
     ]
