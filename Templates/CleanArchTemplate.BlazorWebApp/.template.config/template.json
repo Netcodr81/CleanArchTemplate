@@ -10,7 +10,7 @@
     "name": "Clean Architecture Template - Blazor Web App",
     "shortName": "cleanarch-blazorwebapp",
     "description": "A template for creating a Clean Architecture solution for a Blazor Web App.",
-    "defaultName": "CleanArchTemplate.BlazorWebApp",
+    "defaultName": "CleanArchTemplate",
     "tags": {
         "language": "C#",
         "type": "solution"
@@ -58,7 +58,7 @@
                     "exclude": [
                         "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Counter.razor"
                     ]
-                },
+                },               
                 {
                     "condition": "UseServer",
                     "exclude": [
@@ -118,11 +118,26 @@
                     ]
                 },
                 {
+          "condition": "(IndividualLocalAuth && UseWebAssembly)",
+          "rename": {
+            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Account/Shared/RedirectToLogin.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/RedirectToLogin.razor"
+          }
+        },
+                {
                     "condition": "(IndividualLocalAuth && !UseWebAssembly)",
                     "include": [
                         "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Data/**/*"
                     ]
-                }
+                },
+                              {
+          "condition": "(UseWebAssembly && InteractiveAtRoot)",
+          "rename": {
+            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Layout/": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Layout/",
+            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Home.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Home.razor",
+            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Weather.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Weather.razor",
+            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Routes.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Routes.razor"
+          }
+        }
             ]
         }
     ],

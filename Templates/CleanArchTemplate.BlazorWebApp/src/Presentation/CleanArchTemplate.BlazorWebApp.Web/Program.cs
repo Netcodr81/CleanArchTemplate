@@ -115,7 +115,7 @@ app.MapRazorComponents<App>();
 #if (UseWebAssembly && SampleContent)
     .AddAdditionalAssemblies(typeof(Counter).Assembly);
 #elif (UseWebAssembly)
-    .AddAdditionalAssemblies(typeof(BlazorWeb_CSharp.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(CleanArchTemplate.BlazorWebApp.Web.Client._Imports).Assembly);
 #endif
 
 #if (IndividualLocalAuth)
