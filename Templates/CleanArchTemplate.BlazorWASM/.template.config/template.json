@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Mike Eckel",
+    "classifications": [
+        "Web",
+        "Blazor",
+        "Clean Architecture"
+    ],
+    "identity": "CleanArchTemplate.BlazorWASM.CSharp",
+    "name": "Clean Architecture Template - Blazor WASM",
+    "shortName": "cleanarch-blazorwasm",
+    "description": "A template for creating a Clean Architecture solution with a Blazor WASM app.",
+    "defaultName": "CleanArchTemplate.BlazorWASM",
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "guids": [
+        "42891077-14D6-421A-9456-2D26B66988A3",
+        "E525AFE9-4D8B-4D90-8A00-51165DE08B7B",
+        "DABFAB1A-607B-42F5-9289-75D5C14A6A35",
+        "4F876B0E-943B-4990-92FB-B63B798FEB9F",
+        "2FB01982-6E88-42D1-AB94-3F4DE33BC49D"       
+    ],
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net8.0",
+                    "description": "Target .NET 8"
+                }
+            ],
+            "defaultValue": "net8.0",
+            "replaces": "{{dotnetFrameworkVersion}}"
+        },
+        "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
+        }
+    },
+    "sourceName": "CleanArchTemplate.BlazorWASM",
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ]
+                }
+            ]
+        }
+    ]
+}

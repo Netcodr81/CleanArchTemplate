@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json.schemastore.org/vs-2017.3.host",
+    "icon": "./icon.png",
+    "symbolInfo": [
+        {
+            "id": "Framework",
+            "name": {
+                "text": "Framework",
+                "defaultValue": "net8.0"
+            }
+        },
+        {
+            "id": "InteractivityLocation",
+            "name": {
+                "text": "Interactivity Location",
+                "defaultValue": "InteractiveGlobal"
+            }
+        },
+        {
+            "id": "InteractivityPlatform",
+            "name": {
+                "text": "Render Mode",
+                "defaultValue": "None"
+            }
+        },
+        {
+            "id": "Authorization",
+            "name": {
+                "text": "Authentication type",
+                "defaultValue": "None"
+            }
+        },
+        {
+            "id": "IncludeSampleContent",
+            "name": {
+                "text": "Include Sample Content",
+                "defaultValue": "true"
+            }
+        },
+        {
+            "id": "CreateSolutionDirectory",
+            "name":{
+                "text": "Place solution and project in the same directory",
+                "defaultValue": "true"
+            }
+        }
+    ]
+}

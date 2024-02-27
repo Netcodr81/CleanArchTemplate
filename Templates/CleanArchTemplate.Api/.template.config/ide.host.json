@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "icon": "./icon.png",
+  "symbolInfo": [
+    {
+      "id": "Framework",
+      "name": {
+        "text": "Framework",
+        "defaultValue": "net8.0"
+      }
+    },
+    {
+      "id": "ApiType",
+      "name": {
+        "text": "Select the Api Type",
+        "defaultValue": "Controller"
+      }
+    }
+  ]
+}

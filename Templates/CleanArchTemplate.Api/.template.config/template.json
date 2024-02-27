@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Mike Eckel",
+    "classifications": [
+        "Web",
+        "WebApi",
+        "Clean Architecture"
+    ],
+    "identity": "CleanArchTemplate.WebApi.CSharp",
+    "name": "Clean Architecture Template - Web API",
+    "shortName": "cleanarch-webapi",
+    "description": "A template for creating a Clean Architecture solution with ASP.NET Core Web API.",
+    "defaultName": "CleanArchTemplate.WebApi",
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "guids": [
+        "8433666F-DBC9-4E2D-8329-7884AFB2FF3B",
+        "FB999E1F-F6B5-45B5-A991-0AAD804C0AC2",
+        "CC33BF68-D706-403B-A02D-18B4E79F4A40",
+        "99DC90FA-0822-4FDF-9A73-A485CFCED01F"
+    ],
+    "sourceName": "CleanArchTemplate.Api",
+    "preferNameDirectory": true,
+    "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net8.0",
+                    "description": "Target .NET 8"
+                }
+            ],
+            "defaultValue": "net8.0",
+            "replaces": "{{dotnetFrameworkVersion}}",
+            "isEnabled": true
+        },
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
+        },
+        "CreateSolutionDirectory": {
+            "type": "parameter",
+            "description": "Create a directory for the solution.",
+            "datatype": "bool",
+            "defaultValue": "true"
+        },
+        "UsingControllers": {
+            "type": "computed",
+            "value": "(ApiType == \"Controller\")"
+        },
+        "ApiType": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "Controller",
+                    "description": "Controller Based Api"
+                },
+                {
+                    "choice": "Minimal",
+                    "description": "Minimal Api"
+                }
+            ],
+            "description": "Sets the type of API to Create",
+            "defaultValue": "ControllerApi",
+            "isEnabled": "true"
+        }
+    },
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "modifiers": [
+                {
+                    "exclude": [
+                        ".template.config/**/*",
+                        ".vs/**",
+                        ".cr/**",
+                        ".github/**",
+                        ".gitignore",
+                        ".git/**"
+                    ]
+                },
+                {
+                    "condition": "!UsingControllers",
+                    "exclude": [
+                        "src/Presentation/Controllers/**/*",
+                        "src/Presentation/WeatherForecast.cs"
+                    ]
+                }
+            ]
+        }
+    ]
+}
