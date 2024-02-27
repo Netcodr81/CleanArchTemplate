@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3AABABC0-152
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web", "src\Presentation\CleanArchTemplate.BlazorWebApp.Web\CleanArchTemplate.BlazorWebApp.Web.csproj", "{81459D3A-7131-4690-AA00-9A2133EC3FC7}"
 EndProject
-#if (IncludeClientApp)
+#if (InteractivityPlatform == "WebAssembly" || InteractivityPlatform == "Auto")
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTemplate.BlazorWebApp.Web.Client", "src\Presentation\CleanArchTemplate.BlazorWebApp.Web.Client\CleanArchTemplate.BlazorWebApp.Web.Client.csproj", "{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}"
 EndProject
 #endif
@@ -31,7 +31,7 @@ Global
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7}.Release|Any CPU.Build.0 = Release|Any CPU
-	#if (IncludeClientApp)
+	#if (InteractivityPlatform == "WebAssembly" || InteractivityPlatform == "Auto")
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,7 +52,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81459D3A-7131-4690-AA00-9A2133EC3FC7} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
-	#if (IncludeClientApp)
+	#if (InteractivityPlatform == "WebAssembly" || InteractivityPlatform == "Auto")
 		{80D1407D-7D38-4369-B0CF-EFC87DBEEB88} = {3AABABC0-1525-4191-B24E-284C1D9C9166}
 	#endif
 		{CB38F49B-9A25-4897-BCB6-6AF4E40D4096} = {3AABABC0-1525-4191-B24E-284C1D9C9166}

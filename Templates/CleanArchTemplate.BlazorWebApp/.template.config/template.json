@@ -41,29 +41,30 @@
                     ]
                 },
                 {
-                    "condition": "(!SampleContent)",
-                    "exclude": [
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Auth.*",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Counter.*",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Weather.*",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Layout/NavMenu.*",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/wwwroot/bootstrap/**",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/wwwroot/favicon.*",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/**",
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/wwwroot/**"
-                    ]
-                },
-                {
                     "condition": "(!(UseServer && !UseWebAssembly))",
                     "exclude": [
                         "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Counter.razor"
                     ]
-                },               
+                },
                 {
                     "condition": "UseServer",
                     "exclude": [
                         "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/**/*"
                     ]
+                },
+                {
+                    "condition": "(UseAuto && IndividualLocalAuth)",
+                    "include": [
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/**/*",
+                    ],
+                    "exclude": []
+                },
+                {
+                    "condition": "(UseAuto && !IndividualLocalAuth)",
+                    "include": [
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/**/*"
+                    ],
+                    "exclude": []
                 },
                 {
                     "condition": "(!IndividualLocalAuth)",
@@ -118,26 +119,39 @@
                     ]
                 },
                 {
-          "condition": "(IndividualLocalAuth && UseWebAssembly)",
-          "rename": {
-            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Account/Shared/RedirectToLogin.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/RedirectToLogin.razor"
-          }
-        },
+                    "condition": "(IndividualLocalAuth && UseWebAssembly)",
+                    "rename": {
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Account/Shared/RedirectToLogin.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/RedirectToLogin.razor"
+                    }
+                },
                 {
                     "condition": "(IndividualLocalAuth && !UseWebAssembly)",
                     "include": [
                         "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Data/**/*"
                     ]
                 },
-                              {
-          "condition": "(UseWebAssembly && InteractiveAtRoot)",
-          "rename": {
-            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Layout/": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Layout/",
-            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Home.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Home.razor",
-            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Weather.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Weather.razor",
-            "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Routes.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Routes.razor"
-          }
-        }
+                {
+                    "condition": "(UseWebAssembly && InteractiveAtRoot)",
+                    "rename": {
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Layout/": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Layout/",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Home.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Home.razor",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Weather.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/Weather.razor",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Routes.razor": "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Routes.razor"
+                    }
+                },
+                {
+                    "condition": "(!SampleContent)",
+                    "exclude": [
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Auth.*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Counter.*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Pages/Weather.*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/Components/Layout/NavMenu.*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/wwwroot/bootstrap/**",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web/wwwroot/favicon.*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/Pages/**",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/wwwroot/**"
+                    ]
+                }
             ]
         }
     ],

@@ -36,6 +36,13 @@
                 "text": "Include Sample Content",
                 "defaultValue": "true"
             }
+        },
+        {
+            "id": "CreateSolutionDirectory",
+            "name":{
+                "text": "Place solution and project in the same directory",
+                "defaultValue": "true"
+            }
         }
     ]
 }
