@@ -55,7 +55,7 @@
                 {
                     "condition": "(UseAuto && IndividualLocalAuth)",
                     "include": [
-                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/**/*",
+                        "src/Presentation/CleanArchTemplate.BlazorWebApp.Web.Client/**/*"
                     ],
                     "exclude": []
                 },
