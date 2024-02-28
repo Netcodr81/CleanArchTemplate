@@ -206,6 +206,9 @@ PublishScripts/
 *.nuget.props
 *.nuget.targets
 
+# Ignore Built Templates
+template/**/*
+
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
