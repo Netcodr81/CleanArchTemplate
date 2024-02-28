@@ -18,6 +18,5 @@
   </metadata>
   <files>
     <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;_rels\**\*;package\**\*;.cr\**\*;.vs\**\*;" />
-    <file src="../Readme.md" target="content"/>
   </files>
 </package>
