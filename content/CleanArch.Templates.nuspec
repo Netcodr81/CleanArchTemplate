@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>CleanArch.Templates</id>
+    <version>1.0.0</version>
+    <description>Templates for creating ASP.NET Core Web APIs, MVC, and Blazor web applications.</description>
+    <authors>Mike Eckel</authors>
+    <title>Clean Arch Templates</title>   
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <tags>Clean Architecture;MVC;Web API;Blazor</tags>
+    <projectUrl>https://github.com/Netcodr81/CleanArchTemplate</projectUrl>
+    <repository type="git" url="https://github.com/Netcodr81/CleanArchTemplate" branch="main"  />
+    <language>en-US</language>
+	<packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;_rels\**\*;package\**\*;.cr\**\*;.vs\**\*;" />
+  </files>
+</package>
